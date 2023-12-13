@@ -1,23 +1,29 @@
-<h1 style="text-align: center;font-size:33px;margin-top: 100px;">
+<h1>
     <?= $message; ?>
 </h1>
-<?=$this->debug($postsList) ?>
 
+<section class="divide-y divide-slate-500">
 <?php foreach($postsList as  $post){ ?>
-    <article>
-        <h3>
-            <?= $post->title ?>
-        </h3>
-        <p>
-            <?= $post->content ?>
-        </p>
-        <div>
-            <h4>
-                <?= $authors->findById($post->author,"user_id")->first_name ?>
-            </h4>
-            <h4>
-                <?= $post->created_at ?>
-            </h4>
-        </div>
-    </article>
+    
+        <article class=" p-6">
+            <div class="flex justify-between">
+                <a href="">
+                    <h3 class="underline capitalize"><?= $post->title ?></h3>
+                </a>
+                <h4>
+                    <?= $authors->findById($post->author,"user_id")->first_name ?>
+                </h4>
+            </div>
+            <p class="py-8">
+                <?= $post->content ?>
+            </p>
+            
+                
+                <h4 class="text-right text-xs">
+                    <?= $post->created_at ?>
+                </h4>
+           
+        </article>
+
     <?php } ?>
+    </section>
