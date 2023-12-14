@@ -7,7 +7,7 @@
     
         <article class=" p-6">
             <div class="flex justify-between">
-                <a href="">
+                <a href="/public/post?p=<?= $post->id ?>"> 
                     <h3 class="underline capitalize"><?= $post->title ?></h3>
                 </a>
                 <h4>

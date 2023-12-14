@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Model\AuthorsModel;
 use App\Model\PostsModel;
 use App\Weblitzer\Controller;
 
@@ -13,16 +14,13 @@ class SinglePostController extends Controller
 
     public function index()
     {
-        /* $id = $_POST["p"]; */
-        $this->debug($_POST);
+        $authors = new AuthorsModel;
         $post = new PostsModel;
-        $single = $post->findById();
-        $this->render('app.default.about',array(
-            
-           /* "id" => $id */
-            
+        $single = $post->findById($_GET["p"]);
+        $this->render('app.default.single',array(
+            "single" => $single,
+            "authors" => $authors,
         ));
-        /* $this->render('app.default.contact'); */
     }
 
     /**

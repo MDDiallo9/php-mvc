@@ -5,7 +5,7 @@ $routes = array(
     array('contact','contact','index'),
     array('about','about','index'),
     array('docphp','docphp','index'),
-    array('singlepost','singlepost','index'),
+    array('post','singlepost','index'),
 );
 
 
