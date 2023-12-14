@@ -15,8 +15,7 @@ class SinglePostController extends Controller
     public function index()
     {
         $authors = new AuthorsModel;
-        $post = new PostsModel;
-        $single = $post->findById($_GET["p"]);
+        $single = PostsModel::findById($_GET["p"]);
         $this->render('app.default.single',array(
             "single" => $single,
             "authors" => $authors,

@@ -14,11 +14,10 @@ class DefaultController extends Controller
 
     public function index()
     {
+    
         $message = 'Bienvenue sur le framework MVC';
         $authors = new AuthorsModel;
-        $posts = new PostsModel;
-        /* $authorsList = $authors->all(); */
-        $postsList = $posts->all();
+        $postsList = PostsModel::all();
         $this->render('app.default.frontpage', array(
             'message' => $message,
             "postsList" => $postsList,
