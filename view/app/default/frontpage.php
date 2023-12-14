@@ -1,7 +1,9 @@
 <h1>
     <?= $message; ?>
 </h1>
-
+<div>
+    <a href="">Ajouter </a>
+</div>
 <section class="divide-y divide-slate-500">
 <?php foreach($postsList as  $post){ ?>
     
