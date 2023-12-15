@@ -12,11 +12,7 @@ use App\Weblitzer\Controller;
 class DeleteController extends Controller
 {
     public function isValidPost($id){
-            if (PostsModel::findById($_GET["id"])){
-                return PostsModel::findById($_GET["id"]);
-            } else {
-                $this->Abort404();
-            }
+            PostsModel::findById($_GET["id"]) ? PostsModel::findById($_GET["id"]) : $this->Abort404();
         }
     public function index()
     {

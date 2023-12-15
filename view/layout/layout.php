@@ -10,8 +10,8 @@
   <body class="bg-slate-800 text-white box-border">
 
 
-    <main class="flex h-screen gap-8">
-      <header class="h-screen w-1/6 max-w-[300px] bg-slate-900">
+    <main class="flex h-screen gap-8 max-w-7xl mx-auto">
+      <header class="h-screen w-[280px] border-r-[1px] ">
         <nav class="w-full h-screen ">
             <ul class="flex flex-col h-full p-4  gap-4 text-xl pt-10">
                 <li><a href="<?= $view->path('home'); ?>">Home</a></li>
@@ -21,7 +21,7 @@
             </ul>
         </nav>
       </header>
-      <div class="overflow-y-scroll">
+      <div class="overflow-y-scroll p-2 w-full">
           <?= $content; ?>
       </div>
     </main>
