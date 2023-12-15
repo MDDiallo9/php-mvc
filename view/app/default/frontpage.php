@@ -2,9 +2,10 @@
     <?= $message; ?>
 </h1>
 <div>
-    <a href="">Ajouter </a>
+    <a href="/public/create">Ajouter </a>
 </div>
 <section class="divide-y divide-slate-500">
+    <p>Il y a <?= $count ?> articles sur notre blog</p>
 <?php foreach($postsList as  $post){ ?>
     
         <article class=" p-6">
@@ -24,6 +25,7 @@
                 <h4 class="text-right text-xs">
                     <?= $post->created_at ?>
                 </h4>
+                <a href="/public/delete?d=<?= $post->id ?>">Delete</a>
            
         </article>
 

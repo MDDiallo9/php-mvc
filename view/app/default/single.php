@@ -1,5 +1,6 @@
 <article class=" p-6">
             <div class="flex justify-between">
+                <a href="/public/delete?d=<?= $single->id ?>">Supprimer</a>
                 <a href="">
                     <h3 class="underline capitalize"><?= $single->title ?></h3>
                 </a>

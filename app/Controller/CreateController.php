@@ -15,6 +15,7 @@ class CreateController extends Controller
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $this->debug($_POST);
+            
         }
         $authors = AuthorsModel::all();
         $form = new Form();

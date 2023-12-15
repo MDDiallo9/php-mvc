@@ -21,7 +21,7 @@
             </ul>
         </nav>
       </header>
-      <div class="container">
+      <div class="overflow-y-scroll">
           <?= $content; ?>
       </div>
     </main>

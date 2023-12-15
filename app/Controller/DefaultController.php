@@ -18,10 +18,12 @@ class DefaultController extends Controller
         $message = 'Bienvenue sur le framework MVC';
         $authors = new AuthorsModel;
         $postsList = PostsModel::all();
+        $count = PostsModel::count();
         $this->render('app.default.frontpage', array(
             'message' => $message,
             "postsList" => $postsList,
-            "authors" => $authors
+            "authors" => $authors,
+            "count" => $count
         ));
     }
 
